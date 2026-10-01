@@ -1,0 +1,783 @@
+# Copyright (C) 2026 stacydolan
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Filmmaker Production Studio 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/filmmaker-production-studio\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-22T12:19:09+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: filmmaker-production-studio\n"
+
+#. Theme Name of the theme
+#: style.css
+#: functions.php:42
+msgid "Filmmaker Production Studio"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://blockwpthemes.com/product/filmmaker-production-studio/"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Flimmaker Production Studio is a creative production company dedicated to bringing powerful ideas to life through film, video, and visual storytelling. Our studio combines creativity, technical expertise, and a passion for cinematic storytelling to deliver engaging content for brands, businesses, artists, and organizations. From concept development and scripting to filming, editing, motion graphics, and final production, we provide end-to-end solutions tailored to each project. Our goal is to create visually compelling stories that connect with audiences and communicate your message effectively. Whether you need a promotional video, corporate film, music video, social media content, documentary, or creative visual project, Flimmaker Production Studio is committed to delivering professional results with attention to detail. With a focus on originality, quality, and collaboration, we help turn creative concepts into memorable visual experiences that make an impact."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "stacydolan"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://blockwpthemes.com/"
+msgstr ""
+
+#: functions.php:33
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:58
+msgid "Bone"
+msgstr ""
+
+#: functions.php:59
+msgid "Ghost"
+msgstr ""
+
+#: functions.php:60
+msgid "Ember"
+msgstr ""
+
+#: functions.php:61
+msgid "Text Link"
+msgstr ""
+
+#: functions.php:62
+msgid "Small"
+msgstr ""
+
+#: patterns/404.php
+msgctxt "Pattern title"
+msgid "404"
+msgstr ""
+
+#: patterns/404.php
+msgctxt "Pattern description"
+msgid "Oversized error code with a serif italic centre digit, a short explanation, a search field and a link home."
+msgstr ""
+
+#: patterns/404.php:15
+msgid "This page is not in the can"
+msgstr ""
+
+#: patterns/404.php:19
+msgid "The page you asked for has moved or was never shot. Search for it, or start again from the home page."
+msgstr ""
+
+#: patterns/404.php:22
+#: patterns/banner-search.php:24
+#: patterns/posts-grid.php:40
+msgid "Search"
+msgstr ""
+
+#: patterns/404.php:22
+#: patterns/banner-search.php:24
+#: patterns/posts-grid.php:40
+msgid "Search the studio…"
+msgstr ""
+
+#: patterns/404.php:26
+msgid "Back to home"
+msgstr ""
+
+#: patterns/about.php
+msgctxt "Pattern title"
+msgid "Inside the Studio"
+msgstr ""
+
+#: patterns/about.php
+msgctxt "Pattern description"
+msgid "Studio portrait still with a stage tag, beside the founding story, a set of production notes and a director signature line."
+msgstr ""
+
+#: patterns/about.php:15
+msgid "The studio floor lit for a shoot, with lamps, stands and a camera on sticks"
+msgstr ""
+
+#: patterns/about.php:20
+msgid "ROOM 01 · STAGE"
+msgstr ""
+
+#: patterns/about.php:24
+msgid "2,400 sq ft, 19 ft grid, blackout to daylight in under an hour."
+msgstr ""
+
+#: patterns/about.php:32
+msgid "inside."
+msgstr ""
+
+#: patterns/about.php:36
+msgid "who we are"
+msgstr ""
+
+#: patterns/about.php:41
+msgid "A small unit that keeps the same people on the film"
+msgstr ""
+
+#: patterns/about.php:45
+msgid "Halide started as three people and a borrowed Bolex. It is now a stage, a cutting room and a crew of thirty-seven who have mostly worked together long enough to argue productively."
+msgstr ""
+
+#: patterns/about.php:49
+msgid "We take on around fourteen projects a year. That number is deliberate. It means the director who pitched your film is the one standing behind the monitor, and the editor knows why a take was printed before you have to explain it."
+msgstr ""
+
+#: patterns/about.php:55
+msgid "Founded"
+msgstr ""
+
+#: patterns/about.php:59
+msgid "2017, in a garage on Vancouver Street with one light and a great deal of optimism."
+msgstr ""
+
+#: patterns/about.php:65
+msgid "Rooms"
+msgstr ""
+
+#: patterns/about.php:69
+msgid "Stage, grade suite, sound booth and a cutting room with a door that actually closes."
+msgstr ""
+
+#: patterns/about.php:75
+msgid "Kit"
+msgstr ""
+
+#: patterns/about.php:79
+msgid "Large-format bodies, vintage spherical glass, and a dolly older than most of the crew."
+msgstr ""
+
+#: patterns/about.php:91
+msgid "Marguerite Auer"
+msgstr ""
+
+#: patterns/about.php:95
+msgid "Director & founder"
+msgstr ""
+
+#: patterns/banner-archive.php
+msgctxt "Pattern title"
+msgid "Archive Banner"
+msgstr ""
+
+#: patterns/banner-archive.php
+msgctxt "Pattern description"
+msgid "Letterboxed page banner over a night cinema still, carrying the archive marker, the archive title and a breadcrumb line."
+msgstr ""
+
+#: patterns/banner-archive.php:14
+msgid "the archive."
+msgstr ""
+
+#: patterns/banner-archive.php:18
+msgid "every note filed"
+msgstr ""
+
+#: patterns/banner-archive.php:25
+#: patterns/banner-page.php:25
+#: patterns/header.php:62
+msgid "Home"
+msgstr ""
+
+#: patterns/banner-archive.php:25
+msgid "Archive"
+msgstr ""
+
+#: patterns/banner-page.php
+msgctxt "Pattern title"
+msgid "Page Banner"
+msgstr ""
+
+#: patterns/banner-page.php
+msgctxt "Pattern description"
+msgid "Letterboxed page banner over a night cinema still, carrying the page marker, the page title and a breadcrumb line."
+msgstr ""
+
+#: patterns/banner-page.php:14
+msgid "halide."
+msgstr ""
+
+#: patterns/banner-page.php:18
+msgid "motion picture studio"
+msgstr ""
+
+#: patterns/banner-page.php:25
+msgid "This page"
+msgstr ""
+
+#: patterns/banner-search.php
+msgctxt "Pattern title"
+msgid "Search Banner"
+msgstr ""
+
+#: patterns/banner-search.php
+msgctxt "Pattern description"
+msgid "Letterboxed page banner over a night cinema still, carrying the search marker, the results title and a search field."
+msgstr ""
+
+#: patterns/banner-search.php:14
+msgid "looking for something."
+msgstr ""
+
+#: patterns/banner-search.php:18
+msgid "search results"
+msgstr ""
+
+#: patterns/banner-single.php
+msgctxt "Pattern title"
+msgid "Single Post Banner"
+msgstr ""
+
+#: patterns/banner-single.php
+msgctxt "Pattern description"
+msgid "Letterboxed post banner over a night cinema still, carrying the journal marker, the post title, category, date and author."
+msgstr ""
+
+#: patterns/banner-single.php:14
+#: patterns/blog-post.php:15
+msgid "from the cutting room."
+msgstr ""
+
+#: patterns/banner-single.php:18
+msgid "field report"
+msgstr ""
+
+#: patterns/blog-post.php
+msgctxt "Pattern title"
+msgid "Journal"
+msgstr ""
+
+#: patterns/blog-post.php
+msgctxt "Pattern description"
+msgid "Cutting room journal with a section marker, a heading, a read-everything link and a three column query loop of recent posts."
+msgstr ""
+
+#: patterns/blog-post.php:19
+msgid "notes & field reports"
+msgstr ""
+
+#: patterns/blog-post.php:24
+msgid "Things we learned the slow, expensive way"
+msgstr ""
+
+#: patterns/blog-post.php:30
+msgid "Read every note"
+msgstr ""
+
+#: patterns/blog-post.php:54
+msgid "No notes have been filed yet. The first field report will land here."
+msgstr ""
+
+#: patterns/faq.php
+msgctxt "Pattern title"
+msgid "FAQ"
+msgstr ""
+
+#: patterns/faq.php
+msgctxt "Pattern description"
+msgid "Section marker and heading on the left, with a hairline stack of expandable production questions on the right."
+msgstr ""
+
+#: patterns/faq.php:15
+msgid "before we roll."
+msgstr ""
+
+#: patterns/faq.php:19
+msgid "common questions"
+msgstr ""
+
+#: patterns/faq.php:24
+msgid "Asked often, answered plainly"
+msgstr ""
+
+#: patterns/faq.php:28
+msgid "If your question is not here, write to the producers. Someone answers every enquiry within two working days."
+msgstr ""
+
+#: patterns/faq.php:34
+msgid "How early should we bring you into a project?"
+msgstr ""
+
+#: patterns/faq.php:35
+msgid "As early as there is an idea. We are most useful while the story is still moveable, because that is when a location, a lens or a single cut change can save a week on the schedule."
+msgstr ""
+
+#: patterns/faq.php:40
+msgid "Do you shoot outside California?"
+msgstr ""
+
+#: patterns/faq.php:41
+msgid "Regularly. The core unit travels together and we hire local crew for grip, electric and transport wherever we land. Travel and per diem are itemised separately on every quote."
+msgstr ""
+
+#: patterns/faq.php:46
+msgid "What does a typical shoot cost?"
+msgstr ""
+
+#: patterns/faq.php:47
+msgid "A single-day brand film with a small unit usually lands between mid five figures and low six. Narrative work is quoted per script. You get a line-by-line budget before anything is booked."
+msgstr ""
+
+#: patterns/faq.php:52
+msgid "Who owns the footage when it is finished?"
+msgstr ""
+
+#: patterns/faq.php:53
+msgid "You do. Masters, graded exports and the full card backup are handed over on delivery. We keep an archive copy for two years so a re-cut never starts from nothing."
+msgstr ""
+
+#: patterns/faq.php:58
+msgid "Can you finish something another crew shot?"
+msgstr ""
+
+#: patterns/faq.php:59
+msgid "Yes. The cutting room, grade suite and sound booth are all available on their own, whether the material came off our cards or somebody else’s."
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "Footer"
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern description"
+msgid "Four column studio footer with the logo and blurb, two link stacks, a contact block with icons, and a bottom bar carrying the copyright and social links."
+msgstr ""
+
+#: patterns/footer.php:15
+#: patterns/header.php:57
+msgid "Halide Motion Picture Co., home"
+msgstr ""
+
+#: patterns/footer.php:20
+msgid "A motion picture studio in Springfield, California. Narrative, brand and documentary work, made by the same crew from first read to final mix."
+msgstr ""
+
+#: patterns/footer.php:26
+#: patterns/header.php:64
+msgid "Studio"
+msgstr ""
+
+#: patterns/footer.php:31
+msgid "Selected work"
+msgstr ""
+
+#: patterns/footer.php:35
+msgid "Inside the studio"
+msgstr ""
+
+#: patterns/footer.php:39
+msgid "The unit"
+msgstr ""
+
+#: patterns/footer.php:43
+msgid "How it works"
+msgstr ""
+
+#: patterns/footer.php:47
+msgid "Cutting room notes"
+msgstr ""
+
+#: patterns/footer.php:54
+msgid "Services"
+msgstr ""
+
+#: patterns/footer.php:59
+msgid "Story & direction"
+msgstr ""
+
+#: patterns/footer.php:63
+msgid "Production & crew"
+msgstr ""
+
+#: patterns/footer.php:67
+msgid "Post & colour"
+msgstr ""
+
+#: patterns/footer.php:71
+msgid "Shoot planner"
+msgstr ""
+
+#: patterns/footer.php:75
+msgid "Kit hire"
+msgstr ""
+
+#: patterns/footer.php:82
+msgid "Get in touch"
+msgstr ""
+
+#: patterns/footer.php:112
+msgid "9785 Southwest Vancouver, Springfield, CA"
+msgstr ""
+
+#: patterns/footer.php:119
+#: patterns/header.php:76
+#: patterns/hero.php:44
+msgid "Start a project"
+msgstr ""
+
+#: patterns/footer.php:127
+msgid "Copyright © 2026 Filmmaker WordPress Theme"
+msgstr ""
+
+#: patterns/footer.php:132
+msgid "Instagram"
+msgstr ""
+
+#: patterns/footer.php:136
+msgid "Vimeo"
+msgstr ""
+
+#: patterns/footer.php:140
+msgid "Letterboxd"
+msgstr ""
+
+#: patterns/footer.php:144
+msgid "Privacy"
+msgstr ""
+
+#: patterns/footer.php:148
+msgid "Terms"
+msgstr ""
+
+#: patterns/header.php
+msgctxt "Pattern title"
+msgid "Header"
+msgstr ""
+
+#: patterns/header.php
+msgctxt "Pattern description"
+msgid "Studio topbar with booking note and contact links, above a sticky navigation bar carrying the logo, primary menu and a start-a-project button."
+msgstr ""
+
+#: patterns/header.php:16
+msgid "Halide."
+msgstr ""
+
+#: patterns/header.php:20
+msgid "est. 2017"
+msgstr ""
+
+#: patterns/header.php:25
+msgid "Currently booking Q4 2026"
+msgstr ""
+
+#: patterns/header.php:66
+msgid "Questions"
+msgstr ""
+
+#: patterns/header.php:68
+msgid "Journal"
+msgstr ""
+
+#: patterns/header.php:70
+msgid "Contact"
+msgstr ""
+
+#: patterns/hero.php
+msgctxt "Pattern title"
+msgid "Hero"
+msgstr ""
+
+#: patterns/hero.php
+msgctxt "Pattern description"
+msgid "Letterboxed hero frame with a single still, camera gate marks, studio slate line, headline, lede and calls to action, closed by a camera report strip."
+msgstr ""
+
+#: patterns/hero.php:13
+msgid "A camera operator framing an actor on a location shoot"
+msgstr ""
+
+#: patterns/hero.php:16
+msgid "motion picture studio."
+msgstr ""
+
+#: patterns/hero.php:20
+msgid "Springfield, CA"
+msgstr ""
+
+#: patterns/hero.php:25
+msgid "ANAMORPHIC"
+msgstr ""
+
+#: patterns/hero.php:31
+msgid "We film"
+msgstr ""
+
+#: patterns/hero.php:31
+msgid "the quiet part"
+msgstr ""
+
+#: patterns/hero.php:35
+msgid "Narrative, brand and documentary work, made by one crew from the first read to the final mix. Currently booking from the fourth quarter of 2026."
+msgstr ""
+
+#: patterns/hero.php:40
+msgid "See the work"
+msgstr ""
+
+#: patterns/posts-grid.php
+msgctxt "Pattern title"
+msgid "Posts Grid"
+msgstr ""
+
+#: patterns/posts-grid.php
+msgctxt "Pattern description"
+msgid "Three column query loop of journal cards with a no-results message and hairline pagination."
+msgstr ""
+
+#: patterns/posts-grid.php:37
+msgid "Nothing in the can for that one. Try another search, or head back to the journal."
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Noir"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Soot"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Slate"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Slate Deep"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Bone"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Bone Dim"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Ash"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Ash Dim"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tungsten"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tungsten Deep"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Daylight"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Line"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Line Soft"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Stage Veil"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Banner Veil"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Ember Wash"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Soot Wash"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Archivo"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Bodoni Moda"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "DM Mono"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Display"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "H1"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "H2"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "H3"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "H4"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "H5"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "H6"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Marker"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Lead"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Paragraph"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Mono Label"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Mono Label XS"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Button"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Stat"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "1"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "4"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "5"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "6"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "7"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Soft"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Deep"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""

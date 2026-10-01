@@ -1,0 +1,44 @@
+/* Editor-only tweaks. style.css is also enqueued in the editor
+   (see add_editor_style in functions.php), so component styles are not repeated here. */
+
+/* The canvas is the studio's noir, so blocks read the same as they do on the front end. */
+.editor-styles-wrapper {
+    background-color: var(--wp--preset--color--noir);
+    color: var(--wp--preset--color--bone);
+}
+
+/* The fixed ambient mesh, grain and sprocket rail are decorations for the front end
+   only — inside the canvas they would float above the block toolbars. */
+.editor-styles-wrapper body::before,
+.editor-styles-wrapper body::after,
+.editor-styles-wrapper .wp-site-blocks::before {
+    display: none;
+    content: none;
+}
+
+/* Sticky header would otherwise sit over the editor toolbar. */
+.editor-styles-wrapper .fps-header-wrap {
+    position: static;
+}
+
+/* Blocks get extra wrappers in the editor — restore the positioning context
+   the absolutely placed overlays rely on. */
+.editor-styles-wrapper .fps-inside-shot {
+    position: relative;
+}
+
+.editor-styles-wrapper .fps-inside-tag {
+    z-index: 3;
+}
+
+/* Marker lines are inline-flex paragraphs; the editor wraps each one in a block
+   container that would otherwise stretch them to full width. */
+.editor-styles-wrapper .fps-marker,
+.editor-styles-wrapper .fps-marker-sub {
+    width: fit-content;
+}
+
+/* Details blocks are forced open in the editor — keep the summary readable. */
+.editor-styles-wrapper .fps-faq-list .wp-block-details summary {
+    cursor: default;
+}

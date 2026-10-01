@@ -1,0 +1,85 @@
+/**
+ * Woo Cart Cross Sells widget behavior.
+ *
+ * Initializes a Slick carousel for cross-sell products when enabled.
+ */
+(function ($) {
+  "use strict";
+
+  window.KACartCrossSells = window.KACartCrossSells || (() => {
+  const initSlider = (container) => {
+    const products = container.querySelector('.products');
+    if (!products) return;
+
+    const count = products.querySelectorAll('li.product').length;
+    const cols = parseInt(container.dataset.cols || '4', 10);
+    const colsTablet = parseInt(container.dataset.colsTablet || Math.max(2, Math.min(cols, 3)), 10);
+    const colsMobile = parseInt(container.dataset.colsMobile || '1', 10);
+    const showArrows = container.dataset.arrows === '1';
+    const showDots = container.dataset.dots === '1';
+    const loop = container.dataset.loop === '1';
+    const autoplay = container.dataset.autoplay === '1';
+    const autoplaySpeed = parseInt(container.dataset.autoplaySpeed || '4000', 10);
+    const slidesDesktop = Math.max(1, Math.min(cols, count));
+    const slidesTablet = Math.max(1, Math.min(colsTablet, count));
+    const slidesMobile = Math.max(1, Math.min(colsMobile, count));
+
+    if (count <= 1) {
+      return;
+    }
+
+    if (typeof $.fn.slick === "function") {
+      const $el = $(products);
+      if ($el.hasClass('slick-initialized')) {
+        $el.slick('unslick');
+      }
+      $el.slick({
+        slidesToShow: slidesDesktop,
+        slidesToScroll: 1,
+        infinite: loop && count > slidesDesktop,
+        dots: showDots,
+        arrows: showArrows,
+        autoplay,
+        autoplaySpeed,
+        responsive: [
+          { breakpoint: 1024, settings: { slidesToShow: slidesTablet } },
+          { breakpoint: 768, settings: { slidesToShow: slidesMobile } },
+        ],
+      });
+    }
+  };
+
+  const init = () => {
+    document.querySelectorAll('.ka-woo-cart-cross-sells').forEach((wrap) => {
+      initSlider(wrap);
+    });
+  };
+
+  return { init, initSlider };
+})();
+
+  const initInScope = ($scope) => {
+    const root = $scope && $scope[0] ? $scope[0] : document;
+    root.querySelectorAll(".ka-woo-cart-cross-sells").forEach((wrap) => {
+      // initSlider lives in the closure above; calling it by name here threw
+      // "ReferenceError: initSlider is not defined" on every Elementor
+      // element_ready - in the editor and after any AJAX cart refresh.
+      window.KACartCrossSells.initSlider(wrap);
+    });
+  };
+
+  document.addEventListener("DOMContentLoaded", () => window.KACartCrossSells.init());
+
+  $(window).on("elementor/frontend/init", function () {
+    elementorFrontend.hooks.addAction(
+      "frontend/element_ready/woo_cart_cross_sells.default",
+      function ($scope) {
+        initInScope($scope);
+      }
+    );
+  });
+})(jQuery);
+
+
+
+

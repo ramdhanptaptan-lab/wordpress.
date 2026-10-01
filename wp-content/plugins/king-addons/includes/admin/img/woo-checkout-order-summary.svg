@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+    <defs>
+        <linearGradient id="wcos" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#9B62FF"/>
+            <stop offset="100%" stop-color="#5B03FF"/>
+        </linearGradient>
+    </defs>
+    <rect x="10" y="6" width="28" height="36" rx="3" fill="none" stroke="url(#wcos)" stroke-width="2"/>
+    <rect x="14" y="11" width="16" height="3" rx="1.5" fill="url(#wcos)"/>
+    <rect x="14" y="18" width="12" height="2.2" rx="1.1" fill="url(#wcos)" opacity="0.5"/>
+    <rect x="30" y="18" width="5" height="2.2" rx="1.1" fill="url(#wcos)" opacity="0.5"/>
+    <rect x="14" y="24" width="12" height="2.2" rx="1.1" fill="url(#wcos)" opacity="0.5"/>
+    <rect x="30" y="24" width="5" height="2.2" rx="1.1" fill="url(#wcos)" opacity="0.5"/>
+    <path d="M14 31h20" stroke="url(#wcos)" stroke-width="1.5" opacity="0.35"/>
+    <rect x="14" y="34.5" width="10" height="3" rx="1.5" fill="url(#wcos)"/>
+    <rect x="29" y="34.5" width="6" height="3" rx="1.5" fill="url(#wcos)"/>
+</svg>

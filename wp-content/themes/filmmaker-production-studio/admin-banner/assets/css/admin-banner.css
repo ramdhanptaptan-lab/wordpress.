@@ -1,0 +1,219 @@
+/**
+ * Filmmaker Production Studio — admin banner.
+ *
+ * Colours, radii and button treatment follow the BlockWPThemes brand
+ * (blockwpthemes.com): cream paper, ink text, gold accent, orange on hover.
+ * The display font is the theme's own local Bricolage Grotesque, so the banner
+ * loads no external assets.
+ */
+
+@font-face {
+	font-family: "Bricolage Grotesque";
+	src: url("../../../assets/fonts/BricolageGrotesque-Variable.ttf") format("truetype-variations"),
+		url("../../../assets/fonts/BricolageGrotesque-Variable.ttf") format("truetype");
+	font-weight: 200 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+.bwp-admin-banner {
+	--bwp-bg: #f7f4ed;
+	--bwp-paper: #ffffff;
+	--bwp-ink: #0a0a0a;
+	--bwp-char: #1d1d1d;
+	--bwp-muted: #6b6b6b;
+	--bwp-line: #e7e2d6;
+	--bwp-accent: #f5c747;
+	--bwp-orange: #f15a22;
+	--bwp-gold: #c9a24a;
+	--bwp-display: "Bricolage Grotesque", "Times New Roman", serif;
+
+	margin: 12px 20px 16px 2px;
+	position: relative;
+	clear: both;
+}
+
+.bwp-admin-banner.is-hidden {
+	display: none;
+}
+
+.bwp-admin-banner__inner {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	position: relative;
+	padding: 18px 52px 18px 26px;
+	background: var(--bwp-bg);
+	border: 1px solid var(--bwp-line);
+	border-left: 5px solid var(--bwp-orange);
+	border-radius: 14px;
+	box-shadow: 0 12px 32px -22px rgba(10, 10, 10, .35);
+	overflow: hidden;
+}
+
+/* Soft gold wash behind the logo, keeps the block from reading as a plain box. */
+.bwp-admin-banner__inner::after {
+	content: "";
+	position: absolute;
+	top: -60px;
+	right: -40px;
+	width: 260px;
+	height: 260px;
+	background: radial-gradient(circle, rgba(245, 199, 71, .28) 0%, rgba(245, 199, 71, 0) 68%);
+	pointer-events: none;
+}
+
+.bwp-admin-banner__body {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.bwp-admin-banner__eyebrow {
+	margin: 0 0 4px;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+	color: var(--bwp-gold);
+}
+
+.bwp-admin-banner__title {
+	margin: 0 0 6px;
+	font-family: var(--bwp-display);
+	font-size: 25px;
+	font-weight: 700;
+	line-height: 1.15;
+	color: var(--bwp-ink);
+}
+
+.bwp-admin-banner__text {
+	margin: 0;
+	max-width: 71ch;
+	font-size: 13.5px;
+	line-height: 1.6;
+	color: var(--bwp-muted);
+}
+
+.bwp-admin-banner__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 14px;
+}
+
+.bwp-admin-banner__btn {
+	display: inline-flex;
+	align-items: center;
+	padding: 9px 22px;
+	border: 1.5px solid transparent;
+	border-radius: 99px;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.2;
+	text-decoration: none;
+	white-space: nowrap;
+	transition: all .25s ease;
+}
+
+.bwp-admin-banner__btn:focus {
+	outline: 2px solid var(--bwp-orange);
+	outline-offset: 2px;
+	box-shadow: none;
+}
+
+.bwp-admin-banner__btn--accent {
+	background: var(--bwp-accent);
+	border-color: var(--bwp-accent);
+	color: var(--bwp-ink);
+}
+
+.bwp-admin-banner__btn--dark {
+	background: var(--bwp-ink);
+	border-color: var(--bwp-ink);
+	color: #fff;
+}
+
+.bwp-admin-banner__btn--outline {
+	border-color: var(--bwp-ink);
+	color: var(--bwp-ink);
+}
+
+.bwp-admin-banner__btn--accent:hover,
+.bwp-admin-banner__btn--dark:hover,
+.bwp-admin-banner__btn--outline:hover {
+	background: var(--bwp-orange);
+	border-color: var(--bwp-orange);
+	color: #fff;
+	transform: translateY(-2px);
+}
+
+.bwp-admin-banner__brand {
+	flex: 0 0 auto;
+	position: relative;
+	z-index: 1;
+}
+
+.bwp-admin-banner__brand img {
+	display: block;
+	width: auto;
+	height: 34px;
+	max-width: 100%;
+}
+
+.bwp-admin-banner__close {
+	position: absolute;
+	top: 10px;
+	right: 12px;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 26px;
+	height: 26px;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	border-radius: 50%;
+	color: var(--bwp-muted);
+	font-size: 20px;
+	line-height: 1;
+	cursor: pointer;
+	transition: all .2s ease;
+}
+
+.bwp-admin-banner__close:hover,
+.bwp-admin-banner__close:focus {
+	background: var(--bwp-ink);
+	color: #fff;
+	outline: none;
+}
+
+@media screen and (max-width: 960px) {
+	.bwp-admin-banner__inner {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+	}
+
+	.bwp-admin-banner__brand {
+		order: -1;
+	}
+}
+
+@media screen and (max-width: 782px) {
+	.bwp-admin-banner {
+		margin: 12px 12px 16px;
+	}
+
+	.bwp-admin-banner__inner {
+		padding: 16px 44px 16px 18px;
+	}
+
+	.bwp-admin-banner__title {
+		font-size: 21px;
+	}
+
+	.bwp-admin-banner__btn {
+		padding: 8px 18px;
+	}
+}

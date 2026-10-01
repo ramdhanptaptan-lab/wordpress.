@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "title": "Greenish Teal",
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+         {
+          "slug": "primary",
+          "color": "#2563EB",
+          "name": "Primary"
+        },
+        {
+          "slug": "secondary",
+          "color": "#172554",
+          "name": "Secondary"
+        },
+        {
+          "color": "#000",
+          "name": "Foreground",
+          "slug": "foreground"
+        },
+        {
+          "color": "#fff",
+          "name": "Background",
+          "slug": "background"
+        }
+      ]
+    }
+  }
+}

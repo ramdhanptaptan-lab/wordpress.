@@ -1,0 +1,694 @@
+/**
+ * King Addons AI Settings - Modern Light Design
+ *
+ * @package King_Addons
+ */
+
+/* Reset dark background from admin.css */
+html.wp-toolbar .king-addons-ai-settings,
+body.king-addons_page_king-addons-ai-settings #wpcontent,
+.king-addons_page_king-addons-ai-settings #wpcontent,
+.king-addons-ai-settings {
+    background: #f1f5f9 !important;
+}
+
+/* Override global dark styles */
+body.king-addons_page_king-addons-ai-settings #wpcontent,
+body.king-addons_page_king-addons-ai-settings #wpbody,
+body.king-addons_page_king-addons-ai-settings #wpbody-content {
+    background: #f1f5f9 !important;
+}
+
+/* Global Overrides */
+.king-addons-ai-settings {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin: 20px 20px 20px 0 !important;
+    padding: 0 !important;
+    max-width: 1200px;
+    background: transparent !important;
+}
+
+.king-addons-ai-settings * { box-sizing: border-box; }
+
+/* Header Section */
+.king-addons-settings-header {
+    background: #8b5cf6;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.king-addons-settings-header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.king-addons-settings-header-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.king-addons-settings-header-icon img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+}
+
+.king-addons-settings-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff !important;
+    margin: 0 0 4px 0 !important;
+}
+
+.king-addons-settings-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Settings Container */
+.king-addons-settings-container {
+    background: transparent;
+}
+
+/* Cards - Sections */
+.king-addons-ai-settings h2 {
+    background: #f8fafc;
+    color: #1e293b !important;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 !important;
+    padding: 16px 24px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px 12px 0 0;
+}
+
+.king-addons-ai-settings h2::before {
+    content: '\f111';
+    font-family: dashicons;
+    color: #8b5cf6;
+    font-size: 18px;
+}
+
+/* Section descriptions */
+.king-addons-ai-settings h2 + p {
+    background: #fff;
+    color: #64748b !important;
+    font-size: 13px;
+    margin: 0 !important;
+    padding: 12px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    line-height: 1.5;
+}
+
+/* Form table */
+.king-addons-ai-settings .form-table {
+    background: #fff;
+    margin: 0 0 20px 0 !important;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.king-addons-ai-settings .form-table th,
+.king-addons-ai-settings .form-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: top;
+    background: #fff !important;
+}
+
+.king-addons-ai-settings .form-table tr:last-child th,
+.king-addons-ai-settings .form-table tr:last-child td {
+    border-bottom: none;
+}
+
+.king-addons-ai-settings .form-table th {
+    color: #475569 !important;
+    font-weight: 500;
+    font-size: 13px;
+    width: 200px;
+}
+
+.king-addons-ai-settings .form-table td {
+    color: #1e293b !important;
+}
+
+/* Input Fields */
+.king-addons-ai-settings input[type="text"],
+.king-addons-ai-settings input[type="password"],
+.king-addons-ai-settings input[type="number"],
+.king-addons-ai-settings textarea {
+    background: #fff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 6px !important;
+    color: #1e293b !important;
+    font-size: 14px;
+    padding: 8px 12px !important;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 320px;
+}
+
+.king-addons-ai-settings input[type="text"]:focus,
+.king-addons-ai-settings input[type="password"]:focus,
+.king-addons-ai-settings input[type="number"]:focus,
+.king-addons-ai-settings textarea:focus {
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1) !important;
+    outline: none;
+}
+
+.king-addons-ai-settings input::placeholder,
+.king-addons-ai-settings textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* Select dropdown - FIX ARROW ISSUE */
+.king-addons-ai-settings select {
+    background: #fff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 6px !important;
+    color: #1e293b !important;
+    font-size: 14px;
+    padding: 8px 36px 8px 12px !important;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 320px;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3e%3cpath fill='%2364748b' d='M6 8L0 0h12z'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 12px center !important;
+    background-size: 10px 6px !important;
+}
+
+.king-addons-ai-settings select:focus {
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1) !important;
+    outline: none;
+}
+
+/* Remove default browser select arrow in various browsers */
+.king-addons-ai-settings select::-ms-expand {
+    display: none;
+}
+
+/* Checkboxes */
+.king-addons-ai-settings input[type="checkbox"] {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    width: 44px;
+    height: 24px;
+    background: #cbd5e1 !important;
+    border: none !important;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin: 0 !important;
+    vertical-align: middle;
+}
+
+.king-addons-ai-settings input[type="checkbox"]::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.king-addons-ai-settings input[type="checkbox"]:checked {
+    background: #8b5cf6 !important;
+}
+
+.king-addons-ai-settings input[type="checkbox"]:checked::after {
+    transform: translateX(20px);
+}
+
+.king-addons-ai-settings input[type="checkbox"]:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Labels */
+.king-addons-ai-settings label {
+    color: #475569 !important;
+    font-weight: 400;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Description Text */
+.king-addons-ai-settings .description {
+    color: #64748b !important;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 8px;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Notice Boxes */
+.ka-ai-notice {
+    border-radius: 16px !important;
+    padding: 16px 18px !important;
+    margin: 12px 0 !important;
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    background: rgba(255, 255, 255, 0.72) !important;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    color: #1d1d1f !important;
+    border-left-width: 4px !important;
+}
+
+/* Warning notice (red/coral) */
+.ka-ai-notice-warning {
+    background: rgba(255, 59, 48, 0.08) !important;
+    border-color: rgba(255, 59, 48, 0.22) !important;
+    color: #991b1b !important;
+    border-left-color: rgba(255, 59, 48, 0.9) !important;
+}
+
+.ka-ai-notice-warning strong {
+    color: #b91c1c !important;
+}
+
+/* Info notice (blue) */
+.ka-ai-notice-info {
+    background: rgba(0, 113, 227, 0.10) !important;
+    border-color: rgba(0, 113, 227, 0.22) !important;
+    color: #1e40af !important;
+    border-left-color: rgba(0, 113, 227, 0.9) !important;
+}
+
+.ka-ai-notice-info strong {
+    color: #1d4ed8 !important;
+}
+
+/* Notice title */
+.ka-ai-notice-title {
+    display: block !important;
+    margin-bottom: 10px !important;
+    font-size: 14px !important;
+}
+
+/* Links List */
+.ka-ai-links-list {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.ka-ai-links-list li {
+    margin: 8px 0 !important;
+    padding-left: 20px !important;
+    position: relative;
+}
+
+.ka-ai-links-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.ka-ai-links-list li a {
+    color: #2563eb !important;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: color 0.2s;
+}
+
+.ka-ai-links-list li a:hover {
+    color: #1d4ed8 !important;
+    text-decoration: underline !important;
+}
+
+/* Settings Footer */
+.king-addons-settings-footer {
+    padding: 20px 24px;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-radius: 0 0 12px 12px;
+    text-align: left;
+}
+
+.king-addons-save-button {
+    background: #8b5cf6 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    padding: 10px 24px !important;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: none !important;
+}
+
+.king-addons-save-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3) !important;
+}
+
+/* Usage Statistics */
+.king-addons-ai-usage-stats {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 12px 0;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* ========================================
+   DARK (V3) + LEGACY DARK SUPPORT
+   ======================================== */
+
+body.ka-v3-dark .ka-ai-notice,
+body.ka-dark-theme .ka-ai-notice {
+    background: rgba(28, 28, 30, 0.72) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    color: #f5f5f7 !important;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.30);
+}
+
+body.ka-v3-dark .ka-ai-notice-warning,
+body.ka-dark-theme .ka-ai-notice-warning {
+    background: rgba(255, 149, 0, 0.12) !important;
+    border-color: rgba(255, 149, 0, 0.22) !important;
+    color: #f5f5f7 !important;
+    border-left-color: rgba(255, 149, 0, 0.9) !important;
+}
+
+body.ka-v3-dark .ka-ai-notice-warning strong,
+body.ka-dark-theme .ka-ai-notice-warning strong {
+    color: #ffffff !important;
+}
+
+body.ka-v3-dark .ka-ai-notice-info,
+body.ka-dark-theme .ka-ai-notice-info {
+    background: rgba(0, 113, 227, 0.14) !important;
+    border-color: rgba(0, 113, 227, 0.22) !important;
+    color: #f5f5f7 !important;
+    border-left-color: rgba(0, 113, 227, 0.9) !important;
+}
+
+body.ka-v3-dark .ka-ai-notice-info strong,
+body.ka-dark-theme .ka-ai-notice-info strong {
+    color: #ffffff !important;
+}
+
+body.ka-v3-dark .king-addons-ai-usage-stats,
+body.ka-dark-theme .king-addons-ai-usage-stats {
+    background: rgba(28, 28, 30, 0.72);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.30);
+}
+
+.king-addons-ai-usage-stats table {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.king-addons-ai-usage-stats table th {
+    color: #475569 !important;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 8px 0;
+    text-align: left;
+    width: 40%;
+    background: transparent !important;
+}
+
+.king-addons-ai-usage-stats table td {
+    color: #1e293b !important;
+    padding: 8px 0;
+    font-size: 13px;
+    background: transparent !important;
+}
+
+.king-addons-ai-usage-bar-container {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 12px 0;
+}
+
+.king-addons-ai-usage-bar {
+    height: 100%;
+    background: #8b5cf6;
+    border-radius: 4px;
+    transition: width 0.6s ease;
+}
+
+/* Usage Stats: Dark overrides (must come after light !important rules) */
+body.ka-v3-dark .king-addons-ai-usage-stats table th,
+body.ka-dark-theme .king-addons-ai-usage-stats table th {
+    color: rgba(245, 245, 247, 0.72) !important;
+}
+
+body.ka-v3-dark .king-addons-ai-usage-stats table td,
+body.ka-dark-theme .king-addons-ai-usage-stats table td {
+    color: #f5f5f7 !important;
+}
+
+body.ka-v3-dark .king-addons-ai-usage-bar-container,
+body.ka-dark-theme .king-addons-ai-usage-bar-container {
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Notices */
+.king-addons-ai-settings .notice,
+.king-addons-ai-settings .updated {
+    background: #f0fdf4 !important;
+    border: 1px solid #86efac !important;
+    border-radius: 8px !important;
+    color: #166534 !important;
+    padding: 12px 16px !important;
+    margin: 0 0 16px 0 !important;
+}
+
+.king-addons-ai-settings .notice p {
+    color: #166534 !important;
+    margin: 0 !important;
+}
+
+.king-addons-ai-settings .notice-error,
+.king-addons-ai-settings .error {
+    background: #fef2f2 !important;
+    border-color: #fecaca !important;
+    color: #991b1b !important;
+}
+
+.king-addons-ai-settings .notice-error p {
+    color: #991b1b !important;
+}
+
+.king-addons-ai-settings .notice-warning {
+    background: #fffbeb !important;
+    border-color: #fcd34d !important;
+    color: #92400e !important;
+}
+
+/* Links */
+.king-addons-ai-settings a {
+    color: #8b5cf6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.king-addons-ai-settings a:hover {
+    color: #7c3aed;
+    text-decoration: underline;
+}
+
+/* Secondary buttons - FIX ARROW */
+.king-addons-ai-settings .button-secondary,
+.king-addons-ai-settings .button {
+    background: #fff !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #475569 !important;
+    border-radius: 6px !important;
+    padding: 6px 14px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background-image: none !important;
+}
+
+.king-addons-ai-settings .button-secondary:hover,
+.king-addons-ai-settings .button:hover {
+    border-color: #8b5cf6 !important;
+    color: #8b5cf6 !important;
+    background: #f8fafc !important;
+}
+
+/* Hide default WordPress submit button */
+.king-addons-ai-settings .submit {
+    display: none;
+}
+
+/* Hide default WordPress title */
+.king-addons-ai-settings .wrap > h1:first-child {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .king-addons-settings-header {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .king-addons-settings-header-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .king-addons-ai-settings .form-table th,
+    .king-addons-ai-settings .form-table td {
+        display: block;
+        width: 100%;
+        padding: 12px 16px;
+    }
+
+    .king-addons-ai-settings .form-table th {
+        border-bottom: none;
+        padding-bottom: 4px;
+    }
+
+    .king-addons-ai-settings h2 {
+        padding: 14px 16px;
+    }
+
+    .king-addons-settings-footer {
+        padding: 16px;
+        text-align: center;
+    }
+}
+
+/* ========================================
+   DARK THEME STYLES
+   ======================================== */
+
+body.ka-dark-theme.king-addons_page_king-addons-ai-settings #wpcontent,
+body.ka-dark-theme.king-addons_page_king-addons-ai-settings #wpbody,
+body.ka-dark-theme.king-addons_page_king-addons-ai-settings #wpbody-content,
+body.ka-dark-theme .king-addons-ai-settings {
+    background: #0f172a !important;
+}
+
+body.ka-dark-theme .king-addons-ai-settings h2 {
+    background: #1e293b;
+    color: #f1f5f9 !important;
+    border-bottom-color: #334155;
+}
+
+body.ka-dark-theme .king-addons-ai-settings h2::before {
+    color: #818cf8;
+}
+
+body.ka-dark-theme .king-addons-ai-settings h2 + p {
+    background: #1e293b;
+    color: #94a3b8;
+}
+
+body.ka-dark-theme .king-addons-ai-settings .form-table {
+    background: #1e293b;
+    border-radius: 0 0 12px 12px;
+}
+
+body.ka-dark-theme .king-addons-ai-settings .form-table th,
+body.ka-dark-theme .king-addons-ai-settings .form-table td {
+    border-bottom-color: #334155;
+}
+
+body.ka-dark-theme .king-addons-ai-settings .form-table th {
+    color: #e2e8f0;
+}
+
+body.ka-dark-theme .king-addons-ai-settings .form-table .description {
+    color: #94a3b8;
+}
+
+body.ka-dark-theme .king-addons-ai-settings input[type="text"],
+body.ka-dark-theme .king-addons-ai-settings input[type="password"],
+body.ka-dark-theme .king-addons-ai-settings input[type="number"],
+body.ka-dark-theme .king-addons-ai-settings select,
+body.ka-dark-theme .king-addons-ai-settings textarea {
+    background: #0f172a !important;
+    border-color: #475569 !important;
+    color: #f1f5f9 !important;
+}
+
+body.ka-dark-theme .king-addons-ai-settings input:focus,
+body.ka-dark-theme .king-addons-ai-settings select:focus,
+body.ka-dark-theme .king-addons-ai-settings textarea:focus {
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2) !important;
+}
+
+body.ka-dark-theme .king-addons-settings-footer {
+    background: #0f172a;
+    border-top-color: #334155;
+}
+
+body.ka-dark-theme .king-addons-save-button {
+    background: #8b5cf6;
+}
+
+body.ka-dark-theme .king-addons-ai-settings .button-secondary,
+body.ka-dark-theme .king-addons-ai-settings .button {
+    background: #334155 !important;
+    border-color: #475569 !important;
+    color: #f1f5f9 !important;
+}
+
+body.ka-dark-theme .king-addons-ai-settings .button-secondary:hover,
+body.ka-dark-theme .king-addons-ai-settings .button:hover {
+    background: #475569 !important;
+    border-color: #8b5cf6 !important;
+    color: #fff !important;
+}

@@ -1,0 +1,1164 @@
+.king-addons-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: 32px;
+    background-image: url(../img/default-widget.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#elementor-panel-elements .king-addons-icon {
+    margin-bottom: -8px;
+}
+
+.elementor-panel #elementor-panel-category-king-addons .king-addons-icon {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-size: 48px;
+}
+
+#elementor-navigator .king-addons-icon {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background-size: 19px;
+}
+
+.elementor-panel #elementor-panel-category-king-addons .icon {
+    max-height: 60px;
+}
+
+/*noinspection CssNonIntegerLengthInPixels*/
+.elementor-panel #elementor-panel-category-king-addons .icon:after,
+#elementor-panel-elements .king-addons-icon:after {
+    font-family: Roboto, Arial, Helvetica, Verdana, sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 19px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    display: block;
+    width: 28px;
+    height: 19px;
+    content: 'FREE';
+    letter-spacing: 0.5px;
+    color: #574ff7;
+}
+
+.king-addons-repeater-list-img-icon {
+    max-height: 30px;
+    vertical-align: middle;
+}
+
+.king-addons-editor-preview-update {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.elementor-panel .elementor-element:hover:has(.king-addons-icon) .title,
+.elementor-panel #elementor-panel-category-king-addons .elementor-element:hover .title {
+    transition: all .3s;
+    color: rgb(87, 79, 247);
+}
+
+.elementor-panel .elementor-element:has(.king-addons-icon) {
+    border: 1px solid rgb(87 79 247 / 60%);
+}
+
+.elementor-panel #elementor-panel-category-king-addons .elementor-element {
+    border: 1px solid rgb(87 79 247 / 20%);
+}
+
+.elementor-panel .elementor-element:hover:has(.king-addons-icon),
+.elementor-panel #elementor-panel-category-king-addons .elementor-element:hover {
+    background-color: rgb(87 79 247 / 5%);
+}
+
+.elementor-control-type-repeater .king-addons-submenu-item .king-mega-menu-item-type-control {
+    display: none;
+}
+
+/* -------------- */
+/* Pro Features Disclaimer */
+
+.elementor-control.king-addons-pro-control label i {
+    font-size: 15px;
+    margin-left: 3px;
+    /*color: #772fff;*/
+    color: #5B03FF;
+}
+
+.elementor-control.king-addons-pro-control .elementor-control-content:before {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: transparent;
+}
+
+/* Make .king-addons-pro-control position: relative
+   so the tooltip can be positioned absolutely inside it */
+.king-addons-pro-control {
+    position: relative;
+}
+
+/* The tooltip is hidden by default */
+.king-addons-pro-tooltip {
+    position: absolute;
+    top: 40px;
+
+    /* Styling */
+    padding: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #93003c;
+    border: 1px solid #e6e9ec;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+
+    /* Initially hidden */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 999;
+}
+
+.king-addons-pro-tooltip a {
+    color: #5B03FF;
+    transition: none;
+}
+
+/* Show the tooltip on hover */
+.king-addons-pro-control:hover .king-addons-pro-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.elementor-control-type-raw_html:has(.king-addons-pro-notice) {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* END: Pro Features Disclaimer */
+/* -------------- */
+
+/* -------------- */
+/* NOTICES */
+
+.king-addons-pro-features-heading {
+    font-size: 15px;
+    color: #5B03FF;
+}
+
+.elementor-control[class*="pro_notice"] {
+    padding: 5px 0 15px 0 !important;
+}
+
+.elementor-repeater-row-controls .elementor-control[class*="pro_notice"] {
+    padding: 5px 10px 15px 10px !important
+}
+
+.king-addons-pro-notice {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: 20px 20px;
+    text-align: center;
+    border-top: 1px solid rgb(87 79 247 / 35%);
+    border-bottom: 1px solid rgb(87 79 247 / 35%);
+    background-color: rgb(87 79 247 / 5%);
+}
+
+.king-addons-pro-notice a {
+    color: #5B03FF;
+}
+
+.king-addons-pro-features-list {
+    text-align: center;
+}
+
+.king-addons-pro-features-list ul {
+    text-align: left;
+}
+
+.king-addons-pro-features-list ul li::marker {
+    color: #772fff;
+}
+
+.king-addons-pro-features-list ul li {
+    font-size: 14px;
+    line-height: 1.1;
+    position: relative;
+    margin-top: 9px;
+    padding-bottom: 9px;
+    list-style: disc inside;
+    border-bottom: 1px solid #e6e8ea;
+}
+
+/*noinspection CssNonIntegerLengthInPixels*/
+.king-addons-pro-features-list ul + a.king-addons-pro-features-cta-btn {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 2;
+    display: inline-block;
+    margin: 20px 15px 10px auto;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    letter-spacing: 0.5px;
+    /* text-transform: uppercase; */
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    /* background: linear-gradient(45deg, #5B03FF, #9B62FF); */
+    background-image: linear-gradient(120deg, #A20BD8 0%, #FF4040 100%);
+}
+
+.king-addons-pro-features-list ul + a.king-addons-pro-features-cta-btn:hover {
+    color: #ffffff;
+}
+
+#king-addons-editor-settings-notification {
+    position: fixed;
+    z-index: 9999;
+    bottom: 5px;
+    left: 40px;
+    padding: 13px 25px;
+    color: #222;
+    border-radius: 3px;
+    background: #2a2a2b;
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+#king-addons-editor-settings-notification:before {
+    position: absolute;
+    bottom: 10px;
+    left: -6px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: 6px solid transparent;
+    border-right-width: 6px;
+    border-right-style: solid;
+    border-right-color: #2a2a2b;
+    border-bottom: 6px solid transparent;
+}
+
+.MuiBox-root button[value="document-settings"] {
+    position: relative;
+}
+
+#king-addons-editor-settings-notification.king-addons-new-editor-bar {
+    position: absolute;
+    top: calc(100% + 13px);
+    bottom: auto;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 300px;
+}
+
+#king-addons-editor-settings-notification.king-addons-new-editor-bar:before {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    border-right: 6px solid transparent;
+    border-bottom-width: 6px;
+    border-bottom-style: solid;
+    border-bottom-color: #2a2a2b;
+    border-left: 6px solid transparent;
+}
+
+#king-addons-editor-settings-notification h4 {
+    margin-bottom: 10px;
+}
+
+#king-addons-editor-settings-notification h4 span {
+    font-size: 14px;
+    vertical-align: super;
+    color: #5f5f5f;
+}
+
+#king-addons-editor-settings-notification h4 i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #3db050;
+}
+
+#king-addons-editor-settings-notification p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666;
+}
+
+#king-addons-editor-settings-notification > i {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    cursor: pointer;
+    color: #666666;
+}
+/* END: NOTICES */
+/* -------------- */
+
+/* DARK MODE */
+
+@media (prefers-color-scheme: dark) {
+  .king-addons-pro-notice a {
+    color: #A08CFF;
+}
+.elementor-control.king-addons-pro-control label i {
+    color: #f0abfc;
+}
+.king-addons-pro-features-heading {
+        color: #DED6FA;
+}
+}
+
+/* END: DARK MODE */
+
+/* GRID PREVIEW */
+.elementor-control-king_addons_grid_layout_select.elementor-control .elementor-control-field {
+    align-items: flex-start;
+    flex-direction: column !important;
+}
+
+.elementor-control-king_addons_grid_layout_select.elementor-control .elementor-control-input-wrapper {
+    display: flex;
+    width: 100% !important;
+    margin-top: 10px;
+}
+
+.elementor-control-king_addons_grid_layout_select.elementor-control  .elementor-choices {
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100% !important;
+    height: auto;
+    border: 1px solid #dfd5d5;
+}
+
+.elementor-control-king_addons_grid_layout_select.elementor-control .elementor-choices label {
+    width: 33.3%;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 75%;
+}
+
+.elementor-control-king_addons_grid_layout_select input[type="radio"]:checked + label {
+    border: 2px solid #D30C5C;
+    border-radius: 0 !important;
+    background-color: #ffffff;
+}
+
+.elementor-control-king_addons_grid_layout_select label:nth-child(2) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 32' style='enable-background:new 0 0 50 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0{fill:%23FFFFFF;} .st1{fill:%23C2C1C0;} %3C/style%3E%3Cg id='Background'%3E%3Crect class='st0' width='50' height='32'/%3E%3C/g%3E%3Cg id='Layer_1'%3E%3Crect x='2.2' y='4.9' class='st1' width='22.2' height='22.2'/%3E%3Crect x='25.6' y='15.2' class='st1' width='22.2' height='11.9'/%3E%3Crect x='25.6' y='4.9' class='st1' width='22.2' height='9.2'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.elementor-control-king_addons_grid_layout_select label:nth-child(4) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 32' style='enable-background:new 0 0 50 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0{fill:%23FFFFFF;} .st1{fill:%23C2C1C0;} %3C/style%3E%3Cg id='Background'%3E%3Crect class='st0' width='50' height='32'/%3E%3C/g%3E%3Cg id='Layer_1'%3E%3Crect x='2.2' y='4.9' class='st1' width='22.2' height='22.2'/%3E%3Crect x='25.6' y='16.6' class='st1' width='10.5' height='10.5'/%3E%3Crect x='37.2' y='16.6' class='st1' width='10.5' height='10.5'/%3E%3Crect x='25.6' y='4.9' class='st1' width='22.2' height='10.5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.elementor-control-king_addons_grid_layout_select label:nth-child(6) {
+    background: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 32' style='enable-background:new 0 0 50 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0{fill:%23FFFFFF;} .st1{fill:%23C2C1C0;} %3C/style%3E%3Cg id='Background'%3E%3Crect class='st0' width='50' height='32'/%3E%3C/g%3E%3Cg id='Layer_1'%3E%3Cg%3E%3Crect x='2.2' y='4.9' class='st1' width='22.2' height='22.2'/%3E%3Crect x='25.6' y='16.6' class='st1' width='10.5' height='10.5'/%3E%3Crect x='37.2' y='16.6' class='st1' width='10.5' height='10.5'/%3E%3Crect x='25.6' y='4.9' class='st1' width='10.5' height='10.5'/%3E%3Crect x='37.2' y='4.9' class='st1' width='10.5' height='10.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.elementor-control-king_addons_grid_layout_select label:nth-child(8) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 32' style='enable-background:new 0 0 50 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0{fill:%23FFFFFF;} .st1{fill:%23C2C1C0;} %3C/style%3E%3Cg id='Background'%3E%3Crect class='st0' width='50' height='32'/%3E%3C/g%3E%3Cg id='Layer_1'%3E%3Crect x='2.2' y='4.9' class='st1' width='22.2' height='22.2'/%3E%3Crect x='25.6' y='4.9' class='st1' width='10.5' height='22.2'/%3E%3Crect x='37.2' y='16.6' class='st1' width='10.5' height='10.5'/%3E%3Crect x='37.2' y='4.9' class='st1' width='10.5' height='10.5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.elementor-control-king_addons_grid_layout_select label:nth-child(10) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 32' style='enable-background:new 0 0 50 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0{fill:%23FFFFFF;} .st1{fill:%23C2C1C0;} %3C/style%3E%3Cg id='Background'%3E%3Crect class='st0' width='50' height='32'/%3E%3C/g%3E%3Cg id='Layer_1'%3E%3Crect x='13.9' y='4.9' class='st1' width='22.2' height='22.2'/%3E%3Crect x='37.2' y='16.6' class='st1' width='10.5' height='10.5'/%3E%3Crect x='37.2' y='4.9' class='st1' width='10.5' height='10.5'/%3E%3Crect x='2.3' y='16.6' class='st1' width='10.5' height='10.5'/%3E%3Crect x='2.3' y='4.9' class='st1' width='10.5' height='10.5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.elementor-control-king_addons_grid_layout_select label:nth-child(12) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 32' style='enable-background:new 0 0 50 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0{fill:%23FFFFFF;} .st1{fill:%23C2C1C0;} %3C/style%3E%3Cg id='Background'%3E%3Crect class='st0' width='50' height='32'/%3E%3C/g%3E%3Cg id='Layer_1'%3E%3Crect x='2.2' y='4.9' class='st1' width='28.5' height='22.2'/%3E%3Crect x='31.8' y='12.9' class='st1' width='15.9' height='6.3'/%3E%3Crect x='31.8' y='4.9' class='st1' width='15.9' height='6.8'/%3E%3Crect x='31.8' y='20.3' class='st1' width='15.9' height='6.8'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.elementor-control-king_addons_grid_layout_select label:nth-child(14) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 32' style='enable-background:new 0 0 50 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0{fill:%23FFFFFF;} .st1{fill:%23C2C1C0;} %3C/style%3E%3Cg id='Background'%3E%3Crect class='st0' width='50' height='32'/%3E%3C/g%3E%3Cg id='Layer_1'%3E%3Crect x='13.9' y='4.9' class='st1' width='22.2' height='22.2'/%3E%3Crect x='2.2' y='4.9' class='st1' width='10.5' height='22.2'/%3E%3Crect x='37.2' y='4.9' class='st1' width='10.5' height='22.2'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.elementor-control-king_addons_grid_layout_select label:nth-child(16) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 32' style='enable-background:new 0 0 50 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0{fill:%23FFFFFF;} .st1{fill:%23C2C1C0;} %3C/style%3E%3Cg id='Background'%3E%3Crect class='st0' width='50' height='32'/%3E%3C/g%3E%3Cg id='Layer_1'%3E%3Crect x='2.2' y='4.9' class='st1' width='33.9' height='13.2'/%3E%3Crect x='2.2' y='19.3' class='st1' width='16.4' height='7.8'/%3E%3Crect x='19.7' y='19.3' class='st1' width='16.4' height='7.8'/%3E%3Crect x='37.2' y='4.9' class='st1' width='10.5' height='13.2'/%3E%3Crect x='37.2' y='19.3' class='st1' width='10.5' height='7.8'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.elementor-control-king_addons_grid_layout_select label:nth-child(18) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 32' style='enable-background:new 0 0 50 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0{fill:%23FFFFFF;} .st1{fill:%23C2C1C0;} %3C/style%3E%3Cg id='Background'%3E%3Crect class='st0' width='50' height='32'/%3E%3C/g%3E%3Cg id='Layer_1'%3E%3Crect x='2.2' y='4.9' class='st1' width='22.2' height='12.1'/%3E%3Crect x='25.6' y='4.9' class='st1' width='22.2' height='12.1'/%3E%3Crect x='2.2' y='18.2' class='st1' width='14.4' height='8.9'/%3E%3Crect x='17.8' y='18.2' class='st1' width='14.4' height='8.9'/%3E%3Crect x='33.3' y='18.2' class='st1' width='14.4' height='8.9'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.elementor-control-king_addons_grid_layout_select label:nth-child(20) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 32' style='enable-background:new 0 0 50 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0{fill:%23FFFFFF;} .st1{fill:%23C2C1C0;} %3C/style%3E%3Cg id='Background'%3E%3Crect class='st0' width='50' height='32'/%3E%3C/g%3E%3Cg id='Layer_1'%3E%3Crect x='2.2' y='4.9' class='st1' width='22.2' height='22.2'/%3E%3Crect x='25.6' y='4.9' class='st1' width='22.2' height='22.2'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.elementor-control-king_addons_grid_layout_select label:nth-child(22) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 32' style='enable-background:new 0 0 50 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0{fill:%23FFFFFF;} .st1{fill:%23C2C1C0;} %3C/style%3E%3Cg id='Background'%3E%3Crect class='st0' width='50' height='32'/%3E%3C/g%3E%3Cg id='Layer_1'%3E%3Crect x='2.2' y='4.9' class='st1' width='14.5' height='22.2'/%3E%3Crect x='33.4' y='4.9' class='st1' width='14.4' height='22.2'/%3E%3Crect x='17.9' y='4.9' class='st1' width='14.4' height='22.2'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.elementor-control-king_addons_grid_layout_select label:nth-child(24) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 32' style='enable-background:new 0 0 50 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0{fill:%23FFFFFF;} .st1{fill:%23C2C1C0;} %3C/style%3E%3Cg id='Background'%3E%3Crect class='st0' width='50' height='32'/%3E%3C/g%3E%3Cg id='Layer_1'%3E%3Crect x='2.2' y='4.9' class='st1' width='10.6' height='22.2'/%3E%3Crect x='37.2' y='4.9' class='st1' width='10.5' height='22.2'/%3E%3Crect x='25.6' y='4.9' class='st1' width='10.5' height='22.2'/%3E%3Crect x='14' y='4.9' class='st1' width='10.5' height='22.2'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* END: GRID PREVIEW */
+/* -------------- */
+
+/* FORM BUILDER */
+.king-addons-fb-step-editor-bg {
+    background: rgb(227 227 255) !important;
+    border-color: rgb(87 79 247 / 35%) !important;
+    color: #d6107c;
+}
+
+.king-addons-fb-step-editor-bg button {
+    border-color: rgb(87 79 247 / 35%) !important;
+}
+/* END: FORM BUILDER PREVIEW */
+/* -------------- */
+
+.elementor-label-block .e-ai-button {
+    display: none !important;
+}
+
+.elementor-tags-list .elementor-tags-list__inner .elementor-tags-list__teaser {
+    display: none;
+}
+
+.king-addons-icon.king-addons-image-hotspots {
+    background-image: url(../img/image-hotspots.svg);
+}
+
+.king-addons-icon.king-addons-vertical-scrollable-image {
+    background-image: url(../img/vertical-scrollable-image.svg);
+}
+
+.king-addons-icon.king-addons-one-page-navigation {
+    background-image: url(../img/one-page-navigation.svg);
+}
+
+.king-addons-icon.king-addons-off-canvas-content {
+    background-image: url(../img/off-canvas-content.svg);
+}
+
+.king-addons-icon.king-addons-image-comparison {
+    background-image: url(../img/image-comparison.svg);
+}
+
+.king-addons-icon.king-addons-styled-text-builder {
+    background-image: url(../img/styled-text-builder.svg);
+}
+
+.king-addons-icon.king-addons-global-section-container {
+    background-image: url(../img/global-section-container.svg);
+}
+
+.king-addons-icon.king-addons-card-carousel {
+    background-image: url(../img/card-carousel.svg);
+}
+
+.king-addons-icon.king-addons-auto-scrolling-text {
+    background-image: url(../img/auto-scrolling-text.svg);
+}
+
+.king-addons-icon.king-addons-popup {
+    background-image: url(../img/popup.svg);
+}
+
+.king-addons-icon.king-addons-video-popup {
+    background-image: url(../img/video-popup.svg);
+}
+
+.king-addons-icon.king-addons-blog-posts {
+    background-image: url(../img/blog-posts.svg);
+}
+
+.king-addons-icon.king-addons-image-grid {
+    background-image: url(../img/image-grid.svg);
+}
+
+.king-addons-icon.king-addons-business-hours {
+    background-image: url(../img/business-hours.svg);
+}
+
+.king-addons-icon.king-addons-price-list {
+    background-image: url(../img/price-list.svg);
+}
+
+.king-addons-icon.king-addons-image-hover-box {
+    background-image: url(../img/image-hover-box.svg);
+}
+
+.king-addons-icon.king-addons-reading-progress-bar {
+    background-image: url(../img/reading-progress-bar.svg);
+}
+
+.king-addons-icon.king-addons-pulsing-button {
+    background-image: url(../img/pulsing-button.svg);
+}
+
+.king-addons-icon.king-addons-creative-button {
+    background-image: url(../img/creative-button.svg);
+}
+
+.king-addons-icon.king-addons-hovering-image-stack {
+    background-image: url(../img/hovering-image-stack.svg);
+}
+
+.king-addons-icon.king-addons-advanced-border-radius {
+    background-image: url(../img/advanced-border-radius.svg);
+}
+
+.king-addons-icon.king-addons-content-flip-box {
+    background-image: url(../img/content-flip-box.svg);
+}
+
+.king-addons-icon.king-addons-flip-countdown {
+    background-image: url(../img/flip-countdown.svg);
+}
+
+.king-addons-icon.king-addons-smooth-counter {
+    background-image: url(../img/smooth-counter.svg);
+}
+
+.king-addons-icon.king-addons-testimonial {
+    background-image: url(../img/testimonial.svg);
+}
+
+.king-addons-icon.king-addons-testimonials-wall {
+    background-image: url(../img/testimonial.svg);
+}
+
+.king-addons-icon.king-addons-testimonial-carousel {
+    background-image: url(../img/testimonial-carousel.svg);
+}
+
+.king-addons-icon.king-addons-feature-list {
+    background-image: url(../img/feature-list.svg);
+}
+
+.king-addons-icon.king-addons-taxonomy-list {
+    background-image: url(../img/taxonomy-list.svg);
+}
+
+.king-addons-icon.king-addons-page-list {
+    background-image: url(../img/page-list.svg);
+}
+
+.king-addons-icon.king-addons-search {
+    background-image: url(../img/search.svg);
+}
+
+.king-addons-icon.king-addons-progress-bar {
+    background-image: url(../img/progress-bar.svg);
+}
+
+.king-addons-icon.king-addons-team-member {
+    background-image: url(../img/team-member.svg);
+}
+
+.king-addons-icon.king-addons-team-member-slider {
+    background-image: url(../img/team-member-slider.svg);
+}
+
+.king-addons-icon.king-addons-share-buttons {
+    background-image: url(../img/share-buttons.svg);
+}
+
+.king-addons-icon.king-addons-pricing-table {
+    background-image: url(../img/pricing-table.svg);
+}
+
+.king-addons-icon.king-addons-charts {
+    background-image: url(../img/charts.svg);
+}
+
+.king-addons-icon.king-addons-posts-grid {
+    background-image: url(../img/posts-grid.svg);
+}
+
+.king-addons-icon.king-addons-woocommerce-grid {
+    background-image: url(../img/woocommerce-grid.svg);
+}
+
+.king-addons-icon.king-addons-media-grid {
+    background-image: url(../img/media-grid.svg);
+}
+
+.king-addons-icon.king-addons-magazine-grid {
+    background-image: url(../img/magazine-grid.svg);
+}
+
+.king-addons-icon.king-addons-timeline {
+    background-image: url(../img/timeline.svg);
+}
+
+.king-addons-icon.king-addons-slider {
+    background-image: url(../img/slider.svg);
+}
+
+.king-addons-icon.king-addons-form-builder {
+    background-image: url(../img/form-builder.svg);
+}
+
+.king-addons-icon.king-addons-data-table {
+    background-image: url(../img/data-table.svg);
+}
+
+.king-addons-icon.king-addons-content-ticker {
+    background-image: url(../img/content-ticker.svg);
+}
+
+.king-addons-icon.king-addons-mailchimp {
+    background-image: url(../img/mailchimp.svg);
+}
+
+.king-addons-icon.king-addons-tabs {
+    background-image: url(../img/tabs.svg);
+}
+
+.king-addons-icon.king-addons-accordion {
+    background-image: url(../img/accordion.svg);
+}
+
+.king-addons-icon.king-addons-image-accordion {
+    background-image: url(../img/image-accordion.svg);
+}
+
+.king-addons-icon.king-addons-countdown {
+    background-image: url(../img/countdown.svg);
+}
+
+.king-addons-icon.king-addons-copy-paste {
+    background-image: url(../img/copy-paste.svg);
+}
+
+.king-addons-icon.king-addons-protected-content {
+    background-image: url(../img/protected-content.svg);
+}
+
+.king-addons-icon.king-addons-conditional-display {
+    background-image: url(../img/conditional-display.svg);
+}
+
+.king-addons-icon.king-addons-pricing-calculator {
+    background-image: url(../img/pricing-calculator.svg);
+}
+
+.king-addons-icon.king-addons-pricing-slider {
+    background-image: url(../img/pricing-slider.svg);
+}
+
+.king-addons-icon.king-addons-google-maps {
+    background-image: url(../img/google-maps.svg);
+}
+
+.king-addons-icon.king-addons-form-styler {
+    background-image: url(../img/form-styler.svg);
+}
+
+.king-addons-icon.king-addons-lottie-animations {
+    background-image: url(../img/lottie-animations.svg);
+}
+
+.king-addons-icon.king-addons-mega-menu {
+    background-image: url(../img/mega-menu.svg);
+}
+
+.king-addons-icon.king-addons-filterable-image-gallery {
+    background-image: url(../img/filterable-image-gallery.svg);
+}
+
+.king-addons-icon.king-addons-login-register-form {
+    background-image: url(../img/login-register-form.svg);
+}
+
+.king-addons-icon.king-addons-dynamic-posts-grid {
+    background-image: url(../img/dynamic-posts-grid.svg);
+}
+
+.king-addons-icon.king-addons-advanced-callout-box {
+    background-image: url(../img/advanced-callout-box.svg);
+}
+
+.king-addons-icon.king-addons-magnetic-buttons {
+    background-image: url(../img/magnetic-buttons.svg);
+}
+
+.king-addons-icon.king-addons-parallax-depth-cards {
+    background-image: url(../img/parallax-background.svg);
+}
+
+.king-addons-icon.king-addons-pull-quotes-callouts-builder {
+    background-image: url(../img/pull-quotes-callouts-builder.svg);
+}
+
+.king-addons-icon.king-addons-scrollytelling-slides {
+    background-image: url(../img/scrollytelling-slides.svg);
+}
+
+.king-addons-icon.king-addons-spotlight-reveal {
+    background-image: url(../img/spotlight-reveal.svg);
+}
+
+.king-addons-icon.king-addons-holographic-card {
+    background-image: url(../img/holographic-card.svg);
+}
+
+.king-addons-icon.king-addons-card-slider {
+    background-image: url(../img/card-slider.svg);
+}
+
+.king-addons-icon.king-addons-simple-card-grid {
+    background-image: url(../img/simple-card-grid.svg);
+}
+
+.king-addons-icon.king-addons-simple-post-grid {
+    background-image: url(../img/simple-post-grid.svg);
+}
+
+.king-addons-icon.king-addons-simple-post-slider {
+    background-image: url(../img/simple-post-slider.svg);
+}
+
+.king-addons-icon.king-addons-quick-product-slider {
+    background-image: url(../img/quick-product-slider.svg);
+}
+
+.king-addons-icon.king-addons-quick-product-grid {
+    background-image: url(../img/quick-product-grid.svg);
+}
+
+.king-addons-icon.king-addons-kpi-tiles-microcharts {
+    background-image: url(../img/kpi-tiles-microcharts.svg);
+}
+
+.king-addons-icon.king-addons-interactive-gradient-mesh {
+    background-image: url(../img/interactive-gradient-mesh.svg);
+}
+
+.king-addons-icon.king-addons-breadcrumbs {
+    background-image: url(../img/breadcrumbs.svg);
+}
+
+.king-addons-icon.king-addons-ajax-add-to-cart {
+    background-image: url(../img/ajax-add-to-cart.svg);
+}
+
+.king-addons-icon.king-addons-compare-table {
+    background-image: url(../img/compare-table.svg);
+}
+
+.king-addons-icon.king-addons-icon-steps-process-timeline {
+    background-image: url(../img/timeline.svg);
+}
+
+.king-addons-icon.king-addons-values-circle-infographic {
+    background-image: url(../img/values-circle-infographic.svg);
+}
+
+.king-addons-icon.king-addons-tb-archive-description {
+    background-image: url(../img/tb-archive-description.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-breadcrumbs {
+    background-image: url(../img/woo-product-breadcrumbs.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-variations {
+    background-image: url(../img/woo-product-variations.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-badges {
+    background-image: url(../img/woo-product-badges.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-upsell {
+    background-image: url(../img/woo-product-upsell.svg);
+}
+
+.king-addons-icon.king-addons-woo-products-result-count {
+    background-image: url(../img/woo-products-result-count.svg);
+}
+
+.king-addons-icon.king-addons-woo-checkout-order-summary {
+    background-image: url(../img/woo-checkout-order-summary.svg);
+}
+
+.king-addons-icon.king-addons-woo-checkout-payment {
+    background-image: url(../img/woo-checkout-payment.svg);
+}
+
+.king-addons-icon.king-addons-woo-checkout-coupon {
+    background-image: url(../img/woo-checkout-coupon.svg);
+}
+
+.king-addons-icon.king-addons-woo-checkout-sticky-sidebar {
+    background-image: url(../img/woo-checkout-sticky-sidebar.svg);
+}
+
+.king-addons-icon.king-addons-woo-checkout-acf-fields {
+    background-image: url(../img/woo-checkout-acf-fields.svg);
+}
+
+.king-addons-icon.king-addons-woo-my-account-orders {
+    background-image: url(../img/woo-my-account-orders.svg);
+}
+
+.king-addons-icon.king-addons-woo-my-account-address {
+    background-image: url(../img/woo-my-account-address.svg);
+}
+
+.king-addons-icon.king-addons-woo-my-account-acf-fields {
+    background-image: url(../img/woo-my-account-acf-fields.svg);
+}
+
+.king-addons-icon.king-addons-comparison-matrix-cards {
+    background-image: url(../img/comparison-matrix-cards.svg);
+}
+
+.king-addons-icon.king-addons-content-toggle {
+    background-image: url(../img/content-toggle.svg);
+}
+
+.king-addons-icon.king-addons-facet-active-filters {
+    background-image: url(../img/facet-active-filters.svg);
+}
+
+.king-addons-icon.king-addons-facet-meta {
+    background-image: url(../img/facet-meta.svg);
+}
+
+.king-addons-icon.king-addons-facet-price {
+    background-image: url(../img/facet-price.svg);
+}
+
+.king-addons-icon.king-addons-facet-reset {
+    background-image: url(../img/facet-reset.svg);
+}
+
+.king-addons-icon.king-addons-facet-search {
+    background-image: url(../img/facet-search.svg);
+}
+
+.king-addons-icon.king-addons-facet-taxonomy {
+    background-image: url(../img/facet-taxonomy.svg);
+}
+
+.king-addons-icon.king-addons-floating-tags-marquee {
+    background-image: url(../img/floating-tags-marquee.svg);
+}
+
+.king-addons-icon.king-addons-interactive-steps-progress {
+    background-image: url(../img/interactive-steps-progress.svg);
+}
+
+.king-addons-icon.king-addons-liquid-glass-cards {
+    background-image: url(../img/liquid-glass-cards.svg);
+}
+
+.king-addons-icon.king-addons-loop-grid {
+    background-image: url(../img/loop-grid.svg);
+}
+
+.king-addons-icon.king-addons-pros-cons-box {
+    background-image: url(../img/pros-cons-box.svg);
+}
+
+.king-addons-icon.king-addons-reveal-swipe-cards {
+    background-image: url(../img/reveal-swipe-cards.svg);
+}
+
+.king-addons-icon.king-addons-scroll-story-sections {
+    background-image: url(../img/scroll-story-sections.svg);
+}
+
+.king-addons-icon.king-addons-tb-404-description {
+    background-image: url(../img/tb-404-description.svg);
+}
+
+.king-addons-icon.king-addons-tb-404-search-form {
+    background-image: url(../img/tb-404-search-form.svg);
+}
+
+.king-addons-icon.king-addons-tb-404-title {
+    background-image: url(../img/tb-404-title.svg);
+}
+
+.king-addons-icon.king-addons-tb-archive-pagination {
+    background-image: url(../img/tb-archive-pagination.svg);
+}
+
+.king-addons-icon.king-addons-tb-archive-posts {
+    background-image: url(../img/tb-archive-posts.svg);
+}
+
+.king-addons-icon.king-addons-tb-archive-result-count {
+    background-image: url(../img/tb-archive-result-count.svg);
+}
+
+.king-addons-icon.king-addons-tb-archive-title {
+    background-image: url(../img/tb-archive-title.svg);
+}
+
+.king-addons-icon.king-addons-tb-author-box {
+    background-image: url(../img/tb-author-box.svg);
+}
+
+.king-addons-icon.king-addons-tb-author-info {
+    background-image: url(../img/tb-author-info.svg);
+}
+
+.king-addons-icon.king-addons-tb-back-to-home {
+    background-image: url(../img/tb-back-to-home.svg);
+}
+
+.king-addons-icon.king-addons-tb-featured-image {
+    background-image: url(../img/tb-featured-image.svg);
+}
+
+.king-addons-icon.king-addons-tb-post-comments {
+    background-image: url(../img/tb-post-comments.svg);
+}
+
+.king-addons-icon.king-addons-tb-post-content {
+    background-image: url(../img/tb-post-content.svg);
+}
+
+.king-addons-icon.king-addons-tb-post-excerpt {
+    background-image: url(../img/tb-post-excerpt.svg);
+}
+
+.king-addons-icon.king-addons-tb-post-meta {
+    background-image: url(../img/tb-post-meta.svg);
+}
+
+.king-addons-icon.king-addons-tb-post-navigation {
+    background-image: url(../img/tb-post-navigation.svg);
+}
+
+.king-addons-icon.king-addons-tb-post-taxonomies {
+    background-image: url(../img/tb-post-taxonomies.svg);
+}
+
+.king-addons-icon.king-addons-tb-post-title {
+    background-image: url(../img/tb-post-title.svg);
+}
+
+.king-addons-icon.king-addons-tb-related-posts {
+    background-image: url(../img/tb-related-posts.svg);
+}
+
+.king-addons-icon.king-addons-tb-search-results {
+    background-image: url(../img/tb-search-results.svg);
+}
+
+.king-addons-icon.king-addons-woocommerce-floating-cart-icon {
+    background-image: url(../img/woocommerce-floating-cart-icon.svg);
+}
+
+.king-addons-icon.king-addons-woo-archive-banner {
+    background-image: url(../img/woo-archive-banner.svg);
+}
+
+.king-addons-icon.king-addons-woo-archive-description {
+    background-image: url(../img/woo-archive-description.svg);
+}
+
+.king-addons-icon.king-addons-woo-archive-title {
+    background-image: url(../img/woo-archive-title.svg);
+}
+
+.king-addons-icon.king-addons-woo-cart-coupon-form {
+    background-image: url(../img/woo-cart-coupon-form.svg);
+}
+
+.king-addons-icon.king-addons-woo-cart-cross-sells {
+    background-image: url(../img/woo-cart-cross-sells.svg);
+}
+
+.king-addons-icon.king-addons-woo-cart-empty {
+    background-image: url(../img/woo-cart-empty.svg);
+}
+
+.king-addons-icon.king-addons-woo-cart-table {
+    background-image: url(../img/woo-cart-table.svg);
+}
+
+.king-addons-icon.king-addons-woo-cart-totals {
+    background-image: url(../img/woo-cart-totals.svg);
+}
+
+.king-addons-icon.king-addons-woo-checkout-form {
+    background-image: url(../img/woo-checkout-form.svg);
+}
+
+.king-addons-icon.king-addons-woo-checkout-login {
+    background-image: url(../img/woo-checkout-login.svg);
+}
+
+.king-addons-icon.king-addons-woo-checkout-place-order {
+    background-image: url(../img/woo-checkout-place-order.svg);
+}
+
+.king-addons-icon.king-addons-woo-checkout-progress {
+    background-image: url(../img/woo-checkout-progress.svg);
+}
+
+.king-addons-icon.king-addons-woo-checkout-steps {
+    background-image: url(../img/woo-checkout-steps.svg);
+}
+
+.king-addons-icon.king-addons-woo-my-account-content {
+    background-image: url(../img/woo-my-account-content.svg);
+}
+
+.king-addons-icon.king-addons-woo-my-account-dashboard {
+    background-image: url(../img/woo-my-account-dashboard.svg);
+}
+
+.king-addons-icon.king-addons-woo-my-account-details {
+    background-image: url(../img/woo-my-account-details.svg);
+}
+
+.king-addons-icon.king-addons-woo-my-account-downloads {
+    background-image: url(../img/woo-my-account-downloads.svg);
+}
+
+.king-addons-icon.king-addons-woo-my-account-logout {
+    background-image: url(../img/woo-my-account-logout.svg);
+}
+
+.king-addons-icon.king-addons-woo-my-account-navigation {
+    background-image: url(../img/woo-my-account-navigation.svg);
+}
+
+.king-addons-icon.king-addons-woo-my-account-order-details {
+    background-image: url(../img/woo-my-account-order-details.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-acf-field {
+    background-image: url(../img/woo-product-acf-field.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-add-to-cart {
+    background-image: url(../img/woo-product-add-to-cart.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-countdown {
+    background-image: url(../img/woo-product-countdown.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-cross-sell {
+    background-image: url(../img/woo-product-cross-sell.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-custom-tabs {
+    background-image: url(../img/woo-product-custom-tabs.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-full-description {
+    background-image: url(../img/woo-product-full-description.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-images-gallery {
+    background-image: url(../img/woo-product-images-gallery.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-meta {
+    background-image: url(../img/woo-product-meta.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-price {
+    background-image: url(../img/woo-product-price.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-rating {
+    background-image: url(../img/woo-product-rating.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-related {
+    background-image: url(../img/woo-product-related.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-sku {
+    background-image: url(../img/woo-product-sku.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-short-description {
+    background-image: url(../img/woo-product-short-description.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-stock {
+    background-image: url(../img/woo-product-stock.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-tabs {
+    background-image: url(../img/woo-product-tabs.svg);
+}
+
+.king-addons-icon.king-addons-woo-product-title {
+    background-image: url(../img/woo-product-title.svg);
+}
+
+.king-addons-icon.king-addons-woo-products-grid {
+    background-image: url(../img/woo-products-grid.svg);
+}
+
+.king-addons-icon.king-addons-woo-products-pagination {
+    background-image: url(../img/woo-products-pagination.svg);
+}
+
+.king-addons-icon.king-addons-woo-products-sorting {
+    background-image: url(../img/woo-products-sorting.svg);
+}
+
+.king-addons-icon.king-addons-woo-shortcode-add-to-cart {
+    background-image: url(../img/woo-shortcode-add-to-cart.svg);
+}
+
+.king-addons-icon.king-addons-woo-shortcode-cart {
+    background-image: url(../img/woo-shortcode-cart.svg);
+}
+
+.king-addons-icon.king-addons-woo-shortcode-checkout {
+    background-image: url(../img/woo-shortcode-checkout.svg);
+}
+
+.king-addons-icon.king-addons-woo-shortcode-my-account {
+    background-image: url(../img/woo-shortcode-my-account.svg);
+}
+
+.king-addons-icon.king-addons-woo-shortcode-order-tracking {
+    background-image: url(../img/woo-shortcode-order-tracking.svg);
+}
+
+.king-addons-icon.king-addons-woo-shortcode-product-categories {
+    background-image: url(../img/woo-shortcode-product-categories.svg);
+}
+
+.king-addons-icon.king-addons-woo-shortcode-product-category {
+    background-image: url(../img/woo-shortcode-product-category.svg);
+}
+
+.king-addons-icon.king-addons-woo-shortcode-product-page {
+    background-image: url(../img/woo-shortcode-product-page.svg);
+}
+
+.king-addons-icon.king-addons-woo-shortcode-products {
+    background-image: url(../img/woo-shortcode-products.svg);
+}
+
+.king-addons-icon.king-addons-woo-shortcode-shop-messages {
+    background-image: url(../img/woo-shortcode-shop-messages.svg);
+}
+
+/* for elementor icons */

@@ -1,0 +1,423 @@
+﻿(function ($) {
+    "use strict";
+
+    const widgetProductMedia = function ($scope, $) {
+        // Fix Main Slider Distortion
+        $(document).ready(function ($) {
+            $(window).trigger('resize');
+            setTimeout(function () {
+                $(window).trigger('resize');
+                $scope.find('.tmpcoder-product-media-wrap').removeClass('tmpcoder-zero-opacity');
+
+                var verticalThumbSetup = $scope.data('tmpcoderVerticalThumbSetup');
+                var isDesktopThumbLayout = window.matchMedia('(min-width: 768px)').matches;
+
+                if (typeof elementorFrontend !== 'undefined' && typeof elementorFrontend.getCurrentDeviceMode === 'function') {
+                    var currentDeviceMode = elementorFrontend.getCurrentDeviceMode();
+
+                    if ('mobile' === currentDeviceMode || 'mobile_extra' === currentDeviceMode) {
+                        isDesktopThumbLayout = false;
+                    }
+                }
+
+                if (typeof verticalThumbSetup === 'function' && isDesktopThumbLayout) {
+                    verticalThumbSetup();
+                }
+            }, 1000);
+        });
+
+        var sliderIcons = $scope.find('.tmpcoder-gallery-slider-arrows-wrap');
+        sliderIcons.remove();
+
+        $(document).ready(function ($) {
+            if ($scope.find('.woocommerce-product-gallery__trigger').length) {
+                $scope.find('.woocommerce-product-gallery__trigger').remove();
+            }
+        });
+
+        $scope.find('.flex-viewport').append(sliderIcons);
+
+        var salesBadge = $scope.find('.tmpcoder-product-sales-badge');
+        var flexViewport = $scope.find('.flex-viewport').first();
+        if ( salesBadge.length && flexViewport.length ) {
+            flexViewport.append( salesBadge );
+        }
+
+        $scope.find('.tmpcoder-gallery-slider-arrow').on('click', function () {
+            if ($(this).hasClass('tmpcoder-gallery-slider-prev-arrow')) {
+                $scope.find('a.flex-prev').trigger('click');
+            } else if ($(this).hasClass('tmpcoder-gallery-slider-next-arrow')) {
+                $scope.find('a.flex-next').trigger('click');
+            }
+        });
+
+        // Lightbox
+        var lightboxSettings = $('.tmpcoder-product-media-wrap').attr('data-lightbox');
+
+        if (typeof lightboxSettings !== typeof undefined && lightboxSettings !== false && !editorCheck()) {
+
+            $scope.find('.woocommerce-product-gallery__image').each(function () {
+                $(this).attr('data-lightbox', lightboxSettings);
+                $(this).attr('data-src', $(this).find('a').attr('href'));
+            });
+
+
+            $scope.find('.woocommerce-product-gallery__image').on('click', function (e) {
+                e.stopPropagation();
+            });
+
+            $scope.find('.tmpcoder-product-media-lightbox').on('click', function () {
+                $scope.find('.woocommerce-product-gallery__image').trigger('click');
+            });
+
+            var MediaWrap = $scope.find('.woocommerce-product-gallery__wrapper');
+            lightboxSettings = JSON.parse(lightboxSettings);
+
+            // Init Lightbox
+            MediaWrap.lightGallery(lightboxSettings);
+
+            // Show/Hide Controls
+            MediaWrap.on('onAferAppendSlide.lg, onAfterSlide.lg', function (event, prevIndex, index) {
+                var lightboxControls = $('#lg-actual-size, #lg-zoom-in, #lg-zoom-out, #lg-download'),
+                    lightboxDownload = $('#lg-download').attr('href');
+
+                if ($('#lg-download').length) {
+                    if (-1 === lightboxDownload.indexOf('wp-content')) {
+                        lightboxControls.addClass('tmpcoder-hidden-element');
+                    } else {
+                        lightboxControls.removeClass('tmpcoder-hidden-element');
+                    }
+                }
+
+                // Autoplay Button
+                if ('' === lightboxSettings.autoplay) {
+                    $('.lg-autoplay-button').css({
+                        'width': '0',
+                        'height': '0',
+                        'overflow': 'hidden'
+                    });
+                }
+            });
+        }
+
+        var $mediaWrap = $scope.find('.tmpcoder-product-media-wrap');
+        var isSideThumbLayout = $scope.hasClass('tmpcoder-product-media-thumbs-side-yes') && (
+            $scope.hasClass('tmpcoder-product-media-thumbs-pos-left') ||
+            $scope.hasClass('tmpcoder-product-media-thumbs-pos-right')
+        );
+        var isSideVerticalThumbSlider = $scope.hasClass('tmpcoder-product-media-thumbs-slider') &&
+            isSideThumbLayout &&
+            $mediaWrap.hasClass('tmpcoder-product-media-thumbs-vertical');
+        var isDesktopThumbLayout = window.matchMedia('(min-width: 768px)').matches;
+
+        if (typeof elementorFrontend !== 'undefined' && typeof elementorFrontend.getCurrentDeviceMode === 'function') {
+            var deviceMode = elementorFrontend.getCurrentDeviceMode();
+
+            if ('mobile' === deviceMode || 'mobile_extra' === deviceMode) {
+                isDesktopThumbLayout = false;
+            }
+        }
+
+        if (isSideVerticalThumbSlider && isDesktopThumbLayout) {
+
+            var thumbsToShow = parseInt($mediaWrap.data('slidestoshow'), 10) || 4;
+            var thumbsToScroll = parseInt($mediaWrap.data('slidestoscroll'), 10) || 1;
+            var $flexNav = $scope.find('.flex-control-nav');
+            var $fcnWrap;
+            var currentTranslate = 0;
+            var itemHeight = 0;
+            var itemMargin = 0;
+            var containerHeight = 0;
+            var totalTrackHeight = 0;
+            var arrowsBound = false;
+            var resizeEvent = 'resize.tmpcoderVerticalThumbs' + ($scope.data('id') || '');
+
+            function isDesktopSideLayout() {
+                return window.matchMedia('(min-width: 768px)').matches;
+            }
+
+            function getViewportHeight() {
+                return $fcnWrap && $fcnWrap.length ? $fcnWrap[0].clientHeight : containerHeight;
+            }
+
+            function applyVerticalThumbItemStyles($lis) {
+                $lis.each(function () {
+                    this.style.setProperty('height', itemHeight + 'px', 'important');
+                    this.style.setProperty('flex', '0 0 auto', 'important');
+                });
+            }
+
+            function getItemOuterHeight($li) {
+                if (itemHeight > 0) {
+                    return itemHeight + (parseFloat($li.css('padding-top')) || 0) + (parseFloat($li.css('padding-bottom')) || 0) + (parseFloat($li.css('border-top-width')) || 0) + (parseFloat($li.css('border-bottom-width')) || 0);
+                }
+
+                return $li.outerHeight();
+            }
+
+            function getTrackHeight() {
+                var $lis = $flexNav.find('li');
+
+                if (!$lis.length) {
+                    return 0;
+                }
+
+                var margin = itemMargin || parseFloat($lis.first().css('margin-bottom')) || 0;
+                var $firstLi = $lis.first();
+                var itemOuterHeight = getItemOuterHeight($firstLi);
+
+                return (itemOuterHeight * $lis.length) + (margin * Math.max(0, $lis.length - 1));
+            }
+
+            function getMaxTranslate() {
+                return Math.max(0, getTrackHeight() - getViewportHeight());
+            }
+
+            function getScrollStep() {
+                var $firstLi = $flexNav.find('li').first();
+
+                if (!$firstLi.length) {
+                    return itemHeight + itemMargin;
+                }
+
+                return (getItemOuterHeight($firstLi) + itemMargin) * thumbsToScroll;
+            }
+
+            function updateVerticalArrowState() {
+                var maxTranslate = getMaxTranslate();
+
+                $scope.find('.tmpcoder-thumbnail-slider-prev-arrow').attr('disabled', currentTranslate <= 0);
+                $scope.find('.tmpcoder-thumbnail-slider-next-arrow').attr('disabled', currentTranslate >= maxTranslate - 1);
+            }
+
+            function updateVerticalTransform() {
+                $flexNav.css('transform', 'translate3d(0,-' + currentTranslate + 'px,0)');
+            }
+
+            function remeasureVerticalTrack() {
+                var $lis = $flexNav.find('li');
+
+                if (!$lis.length) {
+                    return false;
+                }
+
+                itemMargin = parseFloat($lis.first().css('margin-bottom')) || 0;
+
+                $flexNav.css('height', 'auto');
+                applyVerticalThumbItemStyles($lis);
+                $flexNav[0].offsetHeight;
+
+                totalTrackHeight = getTrackHeight();
+
+                if (totalTrackHeight <= 0 || itemHeight <= 0) {
+                    return false;
+                }
+
+                $flexNav.css({
+                    width: '',
+                    height: totalTrackHeight + 'px'
+                });
+
+                return true;
+            }
+
+            function bindVerticalArrowHandlers() {
+                if (arrowsBound) {
+                    return;
+                }
+
+                arrowsBound = true;
+
+                $scope.find('.tmpcoder-thumbnail-slider-next-arrow').off('click.tmpcoderVerticalThumbs').on('click.tmpcoderVerticalThumbs', function () {
+                    var maxTranslate = getMaxTranslate();
+
+                    if (currentTranslate < maxTranslate - 1) {
+                        currentTranslate = Math.min(currentTranslate + getScrollStep(), maxTranslate);
+                        updateVerticalTransform();
+                        updateVerticalArrowState();
+                    }
+                });
+
+                $scope.find('.tmpcoder-thumbnail-slider-prev-arrow').off('click.tmpcoderVerticalThumbs').on('click.tmpcoderVerticalThumbs', function () {
+                    if (currentTranslate > 0) {
+                        currentTranslate = Math.max(currentTranslate - getScrollStep(), 0);
+                        updateVerticalTransform();
+                        updateVerticalArrowState();
+                    }
+                });
+            }
+
+            function setupVerticalThumbSlider() {
+                if (!isDesktopSideLayout()) {
+                    return false;
+                }
+
+                containerHeight = $scope.find('.flex-viewport').outerHeight();
+
+                if (!containerHeight || !$flexNav.length) {
+                    return false;
+                }
+
+                var totalItems = $flexNav.find('li').length;
+                itemMargin = parseFloat($flexNav.find('li').first().css('margin-bottom')) || 0;
+                itemHeight = (containerHeight - itemMargin * (thumbsToShow - 1)) / thumbsToShow;
+
+                if (itemHeight <= 0) {
+                    return false;
+                }
+
+                if (!$flexNav.parent().hasClass('tmpcoder-fcn-wrap')) {
+                    $flexNav.wrap('<div class="tmpcoder-fcn-wrap"></div>');
+
+                    var thumbIcon1 = $scope.find('.tmpcoder-thumbnail-slider-prev-arrow');
+                    var thumbIcon2 = $scope.find('.tmpcoder-thumbnail-slider-next-arrow');
+
+                    thumbIcon1.remove();
+                    thumbIcon2.remove();
+
+                    $fcnWrap = $flexNav.parent();
+
+                    if (thumbsToShow < totalItems) {
+                        $fcnWrap.prepend(thumbIcon1);
+                        $fcnWrap.append(thumbIcon2);
+                        $scope.find('.tmpcoder-thumbnail-slider-arrow').removeClass('tmpcoder-tsa-hidden');
+                    }
+
+                    bindVerticalArrowHandlers();
+                    currentTranslate = 0;
+                } else {
+                    $fcnWrap = $flexNav.parent();
+                }
+
+                $fcnWrap.css('height', containerHeight + 'px');
+                $flexNav.css({ width: '', transition: 'none' });
+                applyVerticalThumbItemStyles($flexNav.find('li'));
+
+                $flexNav[0].offsetHeight;
+
+                if (!remeasureVerticalTrack()) {
+                    return false;
+                }
+
+                containerHeight = getViewportHeight();
+
+                var maxTranslate = getMaxTranslate();
+
+                if (currentTranslate > maxTranslate) {
+                    currentTranslate = maxTranslate;
+                }
+
+                updateVerticalTransform();
+                updateVerticalArrowState();
+
+                $flexNav.css('transition', '');
+
+                return true;
+            }
+
+            var verticalInitAttempts = 0;
+
+            function trySetupVerticalThumbSlider() {
+                if (setupVerticalThumbSlider()) {
+                    return;
+                }
+
+                verticalInitAttempts++;
+
+                if (verticalInitAttempts < 40) {
+                    setTimeout(trySetupVerticalThumbSlider, 150);
+                }
+            }
+
+            trySetupVerticalThumbSlider();
+
+            $scope.data('tmpcoderVerticalThumbSetup', setupVerticalThumbSlider);
+
+            $(window).on('load', setupVerticalThumbSlider);
+
+            $(window).off(resizeEvent).on(resizeEvent, function () {
+                if (isDesktopSideLayout()) {
+                    setupVerticalThumbSlider();
+                }
+            });
+        } else if ($scope.hasClass('tmpcoder-product-media-thumbs-slider')) {
+            if (isSideThumbLayout && !isDesktopThumbLayout) {
+                $mediaWrap.removeClass('tmpcoder-product-media-thumbs-vertical').addClass('tmpcoder-product-media-thumbs-horizontal');
+            }
+
+            var thumbsToShow = $mediaWrap.data('slidestoshow');
+            var thumbsToScroll = +$mediaWrap.data('slidestoscroll');
+
+            $scope.find('.flex-control-nav').css({
+                height: '',
+                transform: '',
+                width: ((100 / thumbsToShow) * $scope.find('.flex-control-nav li').length) + '%'
+            });
+
+            $scope.find('.flex-control-nav').wrap('<div class="tmpcoder-fcn-wrap"></div>');
+
+            var thumbIcon1 = $scope.find('.tmpcoder-thumbnail-slider-prev-arrow');
+            var thumbIcon2 = $scope.find('.tmpcoder-thumbnail-slider-next-arrow');
+
+            thumbIcon1.remove();
+            thumbIcon2.remove();
+
+            if ($mediaWrap.data('slidestoshow') < $scope.find('.flex-control-nav li').length) {
+                $scope.find('.tmpcoder-fcn-wrap').prepend(thumbIcon1);
+                $scope.find('.tmpcoder-fcn-wrap').append(thumbIcon2);
+                $scope.find('.tmpcoder-thumbnail-slider-arrow').removeClass('tmpcoder-tsa-hidden');
+            }
+
+            var posx = 0;
+            var slideCount = 0;
+            $scope.find('.tmpcoder-thumbnail-slider-prev-arrow').attr('disabled', true);
+
+
+            // Calculate item width and margin once
+            var itemWidth = parseFloat($scope.find('.flex-control-nav li').css('width'));
+            var itemMargin = parseFloat($scope.find('.flex-control-nav li').css('margin-right'));
+            var totalItems = $scope.find('.flex-control-nav li').length;
+            var containerWidth = $scope.find('.flex-control-nav').parent().width();
+            var totalWidth = (itemWidth + itemMargin) * totalItems;
+
+            $scope.find('.tmpcoder-thumbnail-slider-next-arrow').off('click').on('click', function () {
+                var maxPosx = Math.ceil((totalWidth - containerWidth) / ((itemWidth + itemMargin) * thumbsToScroll));
+
+                if (posx < maxPosx) {
+                    posx++;
+                    slideCount += thumbsToScroll;
+                    var translateXValue = Math.min(posx * (itemWidth + itemMargin) * thumbsToScroll, totalWidth - containerWidth);
+                    $scope.find('.flex-control-nav').css('transform', 'translateX(-' + translateXValue + 'px)');
+
+                    // Update previous arrow state
+                    $scope.find('.tmpcoder-thumbnail-slider-prev-arrow').attr('disabled', posx <= 0);
+
+                    // Update next arrow state
+                    $scope.find('.tmpcoder-thumbnail-slider-next-arrow').attr('disabled', posx >= maxPosx);
+                }
+            });
+
+            $scope.find('.tmpcoder-thumbnail-slider-prev-arrow').off('click').on('click', function () {
+                if (posx > 0) {
+                    posx--;
+                    slideCount -= thumbsToScroll;
+                    var translateXValue = posx * (itemWidth + itemMargin) * thumbsToScroll;
+                    $scope.find('.flex-control-nav').css('transform', 'translateX(-' + translateXValue + 'px)');
+
+                    // Update previous arrow state
+                    $scope.find('.tmpcoder-thumbnail-slider-prev-arrow').attr('disabled', posx <= 0);
+
+                    // Update next arrow state
+                    var maxPosx = Math.ceil((totalWidth - containerWidth) / ((itemWidth + itemMargin) * thumbsToScroll));
+                    $scope.find('.tmpcoder-thumbnail-slider-next-arrow').attr('disabled', posx >= maxPosx);
+                }
+            });
+
+        }
+    } // End widgetProductMedia
+    
+    $(window).on('elementor/frontend/init', function () {
+        elementorFrontend.hooks.addAction("frontend/element_ready/tmpcoder-product-media.default",
+            widgetProductMedia);
+    });
+})(jQuery);

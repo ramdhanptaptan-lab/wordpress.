@@ -1,0 +1,55 @@
+<!-- wp:template-part {"slug":"header","theme":"furniture-carpenter-lite","tagName":"header"} /-->
+
+<!-- wp:pattern {"slug":"furniture-carpenter-lite/search-result"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"3em","bottom":"3em","left":"0px","right":"0px"}}},"layout":{"inherit":true,"type":"constrained","contentSize":"80%"}} -->
+<main class="wp-block-group" style="padding-top:3em;padding-right:0px;padding-bottom:3em;padding-left:0px">
+
+	<!-- wp:group {"style":{"spacing":{"padding":{"bottom":"50px"}}},"layout":{"inherit":true,"type":"constrained"}} -->
+	<div class="wp-block-group" style="padding-bottom:50px">
+		<!-- wp:search {"label":"Search","showLabel":false,"width":100,"widthUnit":"%","buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"align":"center","style":{"color":{"background":"var(--wp--preset--color--primary)"}},"textColor":"light"} /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:query {"queryId":1,"query":{"inherit":true}} -->
+	<div class="wp-block-query">
+
+		<!-- wp:post-template -->
+
+			<!-- wp:post-featured-image {"isLink":true} /-->
+
+			<!-- wp:post-title {"isLink":true} /-->
+
+			<!-- wp:post-date /-->
+
+			<!-- wp:post-excerpt /-->
+
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-no-results -->
+		<!-- wp:group {"className":"no-results","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group no-results">
+
+			<!-- wp:heading {"textAlign":"center"} -->
+			<h2 class="wp-block-heading has-text-align-center">
+				No results found
+			</h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"align":"center"} -->
+			<p class="has-text-align-center">
+				We could not find any posts matching your search. Try different keywords.
+			</p>
+			<!-- /wp:paragraph -->
+
+		</div>
+		<!-- /wp:group -->
+		<!-- /wp:query-no-results -->
+
+	</div>
+	<!-- /wp:query -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"furniture-carpenter-lite","tagName":"footer"} /-->
